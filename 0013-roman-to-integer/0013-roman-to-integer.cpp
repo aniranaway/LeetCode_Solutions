@@ -3,36 +3,53 @@ public:
     int romanToInt(string s) 
     {
       int final = 0;
-      unordered_map<char, int> map =   {{'I', 1}, 
-                                        {'V', 5}, 
-                                        {'X', 10},
-                                        {'L', 50}, 
-                                        {'C', 100}, 
-                                        {'D', 500},
-                                        {'M', 1000}
-                                       };
+        
       for(int i=0;i<s.length();i++)
       {
-          if(s[i] == 'I' && (s[i+1] == 'V' || s[i+1] == 'X'))
+          switch(s[i])
           {
-              final += map[s[i+1]] - map['I'];
-              i+=1;
+              case 'I': final += 1;
+                        break;
+              case 'V': 
+                        if(i>0 && s[i-1] == 'I')
+                            final += 3;
+                        else
+                            final += 5;
+                        break;
+                  
+              case 'X': if(i>0 && s[i-1] == 'I')
+                            final += 8;
+                        else
+                            final += 10;
+                        break;
+                  
+              case 'L': if(i>0 && s[i-1] == 'X')
+                            final += 30;
+                        else
+                            final += 50;
+                        break;
+                  
+              case 'C': if(i>0 && s[i-1] == 'X')
+                            final += 80;
+                        else
+                            final += 100;
+                        break;
+                  
+              case 'D': if(i>0 && s[i-1] == 'C')
+                            final += 300;
+                        else
+                            final += 500;
+                        break;
+                  
+              case 'M': if(i>0 && s[i-1] == 'C')
+                            final += 800;
+                        else
+                            final += 1000;
+                        break;
           }
           
-          else if(s[i] == 'X' && (s[i+1] == 'L' || s[i+1] == 'C'))
-          {
-              final += map[s[i+1]] - map['X'];
-              i+=1;
-          }
-          
-          else if(s[i] == 'C' && (s[i+1] == 'D' || s[i+1] == 'M'))
-          {
-              final += map[s[i+1]] - map['C'];
-              i+=1;
-          }
-          else
-            final += map[s[i]];        
       }
-    return final;
-    }                                       
+        return final;
+    }
+    
 };
