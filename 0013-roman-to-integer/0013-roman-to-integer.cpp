@@ -6,7 +6,6 @@ public:
         
       for(int i=0;i<s.length();i++)
       {
-          std::cout<<s[i];
           switch(s[i])
           {
               case 'I': final += 1;
