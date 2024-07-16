@@ -3,14 +3,12 @@ public:
     int reverse(int x) 
     {
        int reverse = 0;
-       int digit; 
        while(x != 0)
        {
            if(reverse > INT_MAX/10 || reverse < INT_MIN/10)
             return 0;
-           
-           digit = x % 10;
-           reverse = reverse * 10 + digit;          
+
+           reverse = reverse * 10 + x % 10;          
            x/=10;
        }
         
