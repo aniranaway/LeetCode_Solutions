@@ -8,7 +8,6 @@ public:
           digits[digits.size()-1]+=1;
           return digits;
       }
-        
       carry = true;  
       for(int i = digits.size() - 1; i>=0 ; i--)
       {   
@@ -25,5 +24,4 @@ public:
             digits.insert(digits.begin(),1);     
         return digits;
     }
-    
 };
