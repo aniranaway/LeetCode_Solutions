@@ -2,7 +2,7 @@ class Solution {
 public:
     void sortColors(vector<int>& nums) 
     {
-        int n0 = 0,n1 =0 ,n2 =0;
+        int n0 = 0,n1 =0;
         for(int i =0; i<nums.size();i++)
         {
             switch(nums[i])
@@ -10,9 +10,7 @@ public:
                 case 0: n0++;
                         break;
                 case 1: n1++;
-                        break;
-                case 2: n2++;
-                        break;                    
+                        break;              
             }
         }
         
