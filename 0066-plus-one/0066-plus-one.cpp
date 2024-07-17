@@ -11,7 +11,7 @@ public:
       carry = true;  
       for(int i = digits.size() - 1; i>=0 ; i--)
       {   
-        if(digits[i] >= 9 && carry)
+        if(digits[i] == 9 && carry)
             digits[i] = 0;
           
         else if(carry)
