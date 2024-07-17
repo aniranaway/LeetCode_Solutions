@@ -12,7 +12,7 @@ public:
      for(int i=0; i<s.length();i++)
      {
          
-        if(parCheck.empty() || s[i] == '(' || s[i] == '[' || s[i] == '{')
+        if(parCheck.empty())
         {
             parCheck.push(s[i]);
         }
@@ -26,10 +26,7 @@ public:
          {
              parCheck.push(s[i]);
          }
-       
      }
-        
-        
      return parCheck.empty();
     }
 };
