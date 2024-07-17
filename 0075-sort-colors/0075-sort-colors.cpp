@@ -22,7 +22,7 @@ public:
                 nums[i] = 0;
             if(i >=n0 && i< n0+n1)
                 nums[i] = 1;
-            if(i >=n0+n1 && i< n0+n1+n2)
+            if(i >=n0+n1)
                 nums[i] = 2;
         }
     }
