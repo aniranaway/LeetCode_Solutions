@@ -27,10 +27,8 @@ public:
       }
         
         if(carry)
-        {
-            digits.push_back(1);
-            reverse(digits.begin(),digits.end());
-        }
+            digits.insert(digits.begin(),1);
+        
         return digits;
     }
     
