@@ -4,7 +4,7 @@ public:
     {                               
       int temp = x;  
       long rev = 0;
-      int digit;  
+      uint8_t digit;  
       while(temp > 0)  
       {
         digit = temp%10;
