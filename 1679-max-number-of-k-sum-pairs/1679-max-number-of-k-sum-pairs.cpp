@@ -9,7 +9,6 @@ public:
         
       for(int i=0; i<nums.size();i++)
       {         
-          std::cout<<nums[L]<<'\t'<<nums[R]<<'\n';
           if(L>=R)
               break;
           
