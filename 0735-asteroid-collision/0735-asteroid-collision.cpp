@@ -6,15 +6,15 @@ public:
         
         bool remAst{};
 
-            for (int a : asteroids) 
+            for (int asteroid : asteroids) 
             {
-                if (a > 0) astStack.push(a);
+                if (asteroid > 0) astStack.push(asteroid);
 
                 else 
                 {
-                    while (!astStack.empty() && astStack.top() > 0 && astStack.top() < -a)  astStack.pop();
-                    if (astStack.empty() || astStack.top() < 0)                             astStack.push(a);
-                    if (!astStack.empty() && astStack.top() == -a)                          astStack.pop();
+                    while (!astStack.empty() && astStack.top() > 0 && astStack.top() <-asteroid)   astStack.pop();
+                    if (astStack.empty() || astStack.top() < 0)                                     astStack.push(asteroid);
+                    if (!astStack.empty() && astStack.top() == -asteroid)                           astStack.pop();
                     
                 }
             }
