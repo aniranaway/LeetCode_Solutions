@@ -3,7 +3,7 @@ public:
     vector<int> asteroidCollision(vector<int>& asteroids) 
     {
         stack<int> astStack{};
-        vector<int> result{};
+        
         bool remAst{};
 
             for (int a : asteroids) 
@@ -19,14 +19,13 @@ public:
                 }
             }
              
-        
+        vector<int> result;
         
         while(!astStack.empty())
         {
-            result.push_back(astStack.top());
+            result.insert(result.begin(),astStack.top());
             astStack.pop();
         }
-        reverse(result.begin(),result.end());
         return result;
     }
 };
