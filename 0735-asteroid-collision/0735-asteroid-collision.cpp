@@ -12,7 +12,7 @@ public:
 
                 else 
                 {
-                    while (!astStack.empty() && astStack.top() > 0 && astStack.top() <-asteroid)   astStack.pop();
+                    while (!astStack.empty() && astStack.top() > 0 && astStack.top() <-asteroid)    astStack.pop();
                     if (astStack.empty() || astStack.top() < 0)                                     astStack.push(asteroid);
                     if (!astStack.empty() && astStack.top() == -asteroid)                           astStack.pop();
                     
