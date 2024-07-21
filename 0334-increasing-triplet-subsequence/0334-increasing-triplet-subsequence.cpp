@@ -2,9 +2,7 @@ class Solution {
 public:
     bool increasingTriplet(vector<int>& nums) 
     {
-        if (nums.empty() || nums.size() < 3) {
-            return false;
-        }
+        if (nums.empty() || nums.size() < 3)     return false;
         int a = INT_MAX;
         int b = INT_MAX;
         
