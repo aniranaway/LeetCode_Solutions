@@ -4,7 +4,7 @@ public:
         if(nums.size()<k) return -1.0;
 
         int sum{0};
-        sum +=  accumulate(nums.begin(),nums.begin() + k,sum); 
+        sum =  accumulate(nums.begin(),nums.begin() + k,sum); 
         int maxi{sum};
         for(int i=1;i<=nums.size()-k;i++)
         {
